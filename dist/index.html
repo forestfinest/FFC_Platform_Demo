@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Forest Finest Projects</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/x-icon" href="https://www.forestfinestconsulting.com/wp-content/uploads/2017/06/Favicon.png">
+  <link rel="icon" type="image/png" href="https://www.forestfinestconsulting.com/wp-content/uploads/2017/06/Favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.js"></script>  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+    <title>Forest Finest Projects</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- OPEN LAYERS-->
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/build/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.3.1/css/ol.css">
+
+    <!-- ol-ext -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Viglino/ol-ext/master/dist/ol-ext.min.css" />
+    <script type="text/javascript" src="https://cdn.rawgit.com/Viglino/ol-ext/master/dist/ol-ext.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700|Droid+Serif:400,700italic" rel="stylesheet" type="text/css" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+		<script>if (typeof window === 'object') window.jspdfAutoTableVersion = '" + newVersion + "';</script>
+		<script src="./jspdf.plugin.autotable.js"></script>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./html2canvas/html2canvas.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/spiritedaway.js"></script>
+</head>
+<body>
+  <div id="sidebar" class="sidebar collapsed">
+      <!-- Nav tabs -->
+      <div class="sidebar-tabs">
+        <ul role="tablist">
+            <li><a class='tooltip' href="#home" role="tab"><i class="fa fa-home"></i>
+            <span class="tooltiptext">
+                        Description
+                    </span>
+            </a></li>
+          <!--br-->
+          <li><a class='tooltip' href="#info" role="tab"><i class="fa fa-info" aria-hidden="true"></i>
+          <span class="tooltiptext">
+                    Details
+                  </span>
+          </a></li>
+          <!--br-->
+          <li><a class='tooltip' href="#result" role="tab"><i class="fa fa-child" aria-hidden="true"></i>
+          <span class="tooltiptext">
+                      Results
+                  </span>
+          </a></li>
+          <!--br-->
+          <li><a class='tooltip' href="#sponsor" role="tab"><i class="fa fa-leaf" aria-hidden="true"></i>
+          <span class="tooltiptext">
+                      Partners and Certificatons
+                  </span>
+          </a></li>
+          <!--br-->
+          <li><a class='tooltip' href=" https://co2ol.maps.arcgis.com/apps/MapTour/index.html?appid=ed79f3e8392d485a8c87e12ac2716a71" role="tab" target="_blank"><i class="fa fa-picture-o" aria-hidden="true"></i>
+          <span class="tooltiptext">
+                      Story Map
+                  </span>
+          </a></li>
+          <!--br-->
+          <li><a class='tooltip' href="https://www.co2ol.de/wp-content/uploads/2019/09/TMIX_factsheet_EN-compressed.pdf" role="tab" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+          <span class="tooltiptext">
+          PDF Overview
+          </span>
+          </a></li>
+        </ul>
+      </div>
+
+      <!-- Tab panes -->
+      <div class="sidebar-content">
+        <div class="sidebar-pane" id="home">
+          <div class="w3-content w3-display-container" style="max-width:800px">
+              <img class="mySlides" src="./img/Isla Cebaco (25).JPG" style="width:100%">
+              <img class="mySlides" src="./img/Isla Cebaco (45).JPG" style="width:100%">
+              <img class="mySlides" src="./img/Isla Cebaco (57).JPG" style="width:100%">
+              <button class="w3-button w3-white w3-display-left" style='border-radius: 20px !important;' onclick="plusDivs(-1)">&#10094;</button>
+              <button class="w3-button w3-white w3-display-right" style='border-radius: 20px !important;' onclick="plusDivs(1)">&#10095;</button>
+            </div>
+            <br>
+            <br>
+            <h1 class="sidebar-header">
+              Cebaco Island Project
+              <span class="sidebar-close"><i class="fa fa-chevron-circle-left"></i></span>
+            </h1>
+
+            <p class="lorem">
+            Degraded land, originally forest land, later used for extensive cattle ranching, is reforested with mostly native tree species and gradually converted into mixed forests. The project provides for sustainable timber production and cocoa cultivation; it protects biodiversity and restores a healthy forest ecosystem.
+            Sustainable forest management and cocoa production offer employment opportunities, therefore improve the economic and social situation of rural communities and families. Moreover, the project helps to promote mutual learning and knowledge transfer.
+            CO2OL Tropical Mix has been one of the first in line to be successfully certified under the renowned Gold Standard for land use and forestry projects; the cocoa production areas have been the first agroforestry systems to be certified under the Gold Standard.
+            </p>
+        </div>
+
+        <div class="sidebar-pane" id="profile">
+          <h1>Control Layer</h1>
+          <div></div>
+        </div>
+
+        <div class="sidebar-pane" id="info">
+          <h1 class="sidebar-header">
+            Information About:
+            <span class="sidebar-close"><i class="fa fa-chevron-circle-left"></i></span>
+          </h1>
+          <br>
+          <table class="tg">
+            <tr>
+              <th class="tg-0lax">Project type</th>
+              <th class="tg-0lax">Reforestation</th>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Location</td>
+              <td class="tg-0lax">Panama: provinces panama, Darien and Veraguas</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Project size</td>
+              <td class="tg-0lax">13.385 hectares</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Project developer</td>
+              <td class="tg-0lax">ForestFinance Group, Sustainable Timber and Eco Cebaco</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Standard</td>
+              <td class="tg-0lax">Gold Standard, FSC, UTZ (cacao)</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Validator/certifier</td>
+              <td class="tg-0lax">Control Union</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">Communications</td>
+              <td class="tg-0lax">Project description, brochure, pictures, video, interactive map, background stories, chocolate, project visit is possible</td>
+            </tr>
+          </table>
+          <br>
+          <h1 class="sidebar-header">
+            Sustainable Development Goals
+          </h1>
+          <br>
+          <div class="w3-content w3-display-container">
+            <img class="mySlide" src="./sdg/Logo.png" style="width:80%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-01.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-04.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-08.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-12.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-13.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <img class="mySlide" src="./sdg/E-WEB-Goal-15.png" style="width:50%; height:50%; margin-left: auto; margin-right: auto;">
+            <button class="w3-button w3-white w3-display-left" style='border-radius: 20px !important;' onclick="plusDiva(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right" style='border-radius: 20px !important;' onclick="plusDiva(1)">&#10095;</button>
+          </div>
+        </div>
+
+        <div class="sidebar-pane" id="result">
+          <h1 class="sidebar-header">
+            Our Results
+          </h1>
+          <br>
+          <div class= "result1">
+            <br>
+            <br>
+            <h4 style="color:#fff; text-align: center;">over 7,5 mln. trees have been planted to date</h4>
+            <br>
+            <br>
+          </div>
+          <br>
+          <br>
+          <div class= "result2">
+            <br>
+            <br>
+            <h4 style="color:#fff; text-align: center;">150 jobs created so far</h4>
+            <br>
+            <br>
+          </div>
+          <br>
+          <br>
+          <div class= "result3">
+            <br>
+            <br>
+            <h4 style="color:#fff; text-align:center;">15 endangered species on the Red List find a habitat</h4>
+            <br>
+            <br>
+          </div>
+
+        </div>
+
+        <div class="sidebar-pane" id="sponsor">
+          <h1 class="sidebar-header">
+              Certification
+              <span class="sidebar-close"><i class="chevron-circle-left"></i></span>
+            </h1>
+            <br>
+            <div class='cert'>
+            <img class="myCert" src="./img/gold_standard.png" style="height:50px;">
+            &nbsp
+            <img class="myCert" src="./img/FSC.png" style="height:50px;">
+            &nbsp&nbsp
+            <img class="myCert" src="./img/utz.png" style="height:50px;">
+            </div>
+            <br>
+            <h1 class="sidebar-header">
+              Partners
+              <span class="sidebar-close"><i class="fa fa-chevron-circle-left"></i></span>
+            </h1>
+            <br>
+            <div class="w3-content w3-display-container" style="max-width:800px">
+              <img class="Perform" src="./img/Logo_ffc.png" style="width:200px; margin-left: auto; margin-right: auto;">
+              <img class="Perform" src="./img/Logo_cool.png" style="width:200px; margin-left: auto; margin-right: auto;"> 
+              <button class="w3-button w3-white w3-display-left" style='border-radius: 20px !important;' onclick="plusDivc(-1)">&#10094;</button>
+              <button class="w3-button w3-white w3-display-right" style='border-radius: 20px !important;' onclick="plusDivc(1)">&#10095;</button>
+            </div>
+        </div>
+      </div>  
+  </div>
+
+
+  <div id="map" class="sidebar-map"></div> 
+  
+  <!--TOOLS BUTTONS-->
+  <div id="barra_botones" class= "fixed-action-btn" >
+    <a onclick=delete_interaction() class="btn-floating btn-medium white">
+      <i class="material-icons" style="color: #000000">straighten</i>
+    </a>
+
+    <ul>
+      <li><a class="btn-floating btn-medium black" onclick= medir_line()><i class="material-icons">linear_scale</i></a></li>
+      <li><a class="btn-floating btn-medium black" onclick= medir_pol()><i class="material-icons">format_shapes</i></a></li>
+    </ul>
+  </div>
+
+  <div id="analisis" class= "fixed-action-btn" >
+      <a class="btn-floating btn-medium white">
+        <i class="material-icons" style="color: #000000">scatter_plot</i>
+      </a>
+
+      <ul>
+        <li><a class="btn-floating btn-medium black" onclick= bar_char()><i class="material-icons">bar_chart</i></a></li>
+        <li><a class="btn-floating btn-medium black" onclick= pie_chart()><i class="material-icons">pie_chart</i></a></li>
+      </ul>
+  </div>
+
+  <div id="print" class= "fixed-action-btn" >
+      <a onclick=print() class="btn-floating btn-medium white">
+        <i class="material-icons" style="color: #000000">print</i>
+      </a>
+  </div>
+
+  <div id="project" class= "fixed-action-btn" >
+      <a onclick = "projects()" id="drone" class="btn-floating btn-medium white">
+        <i class="material-icons" style="color: #000000"><img class = "icon" src="https://cdn1.iconfinder.com/data/icons/appliance-1/100/Drone-07-512.png"></i>
+      </a>
+      <a onclick = "projects()" id= "close_drone" style="display:none" class="btn-floating btn-medium white">
+        <i class="material-icons"  style="color: #000000">close</i>
+      </a>
+  </div>
+
+  <div id="heat_map" class= "fixed-action-btn" >
+      <a class="btn-floating btn-medium white"  role="tab">
+        <i class="material-icons" style="color:#000000">donut_small</i>
+      </a>
+      <ul>
+        <li><a class="btn-floating btn-medium black" onclick= heat_map()><i class="material-icons">bubble_chart</i></a></li>
+        <li><a class="btn-floating btn-medium black" onclick= clip()><i class="material-icons">photo_size_select_small</i></a></li>
+      </ul>
+  </div>
+
+  <div id="heat_map_close" class= "fixed-action-btn" style="display:none" >
+      <a onclick = "heat_map_close()" class="btn-floating btn-medium white">
+        <i class="material-icons" style="color: #000000">close</i>
+      </a>
+  </div>
+
+  <div id="filters" class= "fixed-action-btn" >
+        <form>
+          <a onclick = "filter_modal()" class="btn-floating btn-medium white">
+          <i class="material-icons" style="color: #000000">search</i>
+        </a>
+          <input type="text" id="search" style='display:none;' placeholder="   Please search by keywords">
+        </form>
+  </div>
+  <!--DIVCHART-->
+  <div id="chart" class="modal sheet" style="z-index: 1003; display: block; opacity: 0.9; width:auto;bottom: -100%;width:45% !important;">
+    <a onclick = close_chart() class="waves-effect waves-light btn black" style="position:absolute;width:100%;height:2em;">
+    <i class="material-icons md-18" style= "top:0px;color:#fff;margin:0;s">close</i>
+    </a>
+    <br>
+    <div class="modal-content">
+      <div id="chartdiv"></div>
+    </div>
+  </div>
+<!--LOGO MODAL-->
+  <div id="logo" class="modal sheet" style="z-index: 1003;width:200px;display: block;opacity: 0.5; bottom: 7px;margin:0;left:83%;">
+      <img href="https://www.forestfinestconsulting.com/" src="./img/Logo_ffc.png" style="width:200px; height:auto">
+  </div>
+<!--ALERT DIV-->
+  <div id="ohsnap"></div>
+<!--MODAL BUTTONS-->
+<div id="modal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-opacity w3-card-1">
+      <header id = "head_modal"class="w3-container"> 
+      <span onclick="document.getElementById('modal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+      <p id = "title_modal"></p>
+      </header>
+      <div id = "modal_cont" class="w3-container">
+      </div>
+      <footer class="w3-container">
+        <img href="https://www.forestfinestconsulting.com/" target="_blank" src="./img/Logo_ffc.png" style="width:150px; height:auto">
+        <p><i>Produced by <i><a href="https://www.forestfinestconsulting.com/" target="_blank">Forest Finest Consulting</a></p>
+      </footer>
+    </div>
+  </div>
+<!--Now Loading-->
+<div id="loader" style='display:none'>
+  <div class="wrap">
+    <div class="loading">
+      <div class="bounceball"></div>
+      <div class="text">LOADING...</div>
+    </div>
+  </div>
+  </div>
+
+  <link rel="stylesheet" href="./ol.css" />
+  <script src="//turbo87.github.io/sidebar-v2/js/ol3-sidebar.js" ></script>
+</body>
+</html>
+<script  src="./script.js"></script>
+<script  src="./funciones.js"></script>
+<script  src="./onClickMap.js"></script>
+<script  src="./ohsnap.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'top',
+      hoverEnabled: false
+    });
+  });
+</script>
+</body>
+</html>
